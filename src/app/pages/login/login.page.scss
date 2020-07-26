@@ -1,0 +1,148 @@
+ion-content {
+    --backgound-color: #fff;
+    --padding-top: 1.5rem;
+    --padding-start: 1.2rem;
+    --padding-end: 1.2rem;
+
+    .top {
+        display: flex;
+        margin-bottom: 0.6rem;
+        align-items: center;
+        flex-direction: column;
+        
+        p {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--ion-custom-primary-red);
+        }
+
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius:100%;
+            width:150px;
+            height:150px;
+            margin-right: 10px;
+        }
+    }
+
+
+    ion-input,ion-datetime {
+        --padding-bottom: 0.1rem;
+        --placeholder-font-weight: 300;
+        --placeholder-color: #718096;
+        --placeholder-margin-bottom: 0.1rem;
+        font-size: 1rem;
+    }
+    ion-label {
+        color: #718096;
+    }
+    ion-item {
+        --border-color: var(--ion-custom-primary-blue);
+        --border-width: 0 0 0.08rem 0;
+        --padding-start: 0;
+        --padding-bottom: 0;
+        margin-bottom: 0.3rem;
+        // transform: translateY(-90%);
+
+    }
+
+    .card {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        z-index: 999;
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+        }
+        .card-title {
+            text-align: end;
+        }
+        
+    }
+    .laptop {
+        background: url(../../../assets/icon/undraw_secure_login_pdn4.png) no-repeat top center/cover;
+        height: 150px;
+        width: 200px;
+        opacity: 0.3;
+        z-index: 9999;
+    }
+    .two {
+        display: flex;
+        justify-content: space-between;
+        ion-item {
+            flex: 0.5;
+            display: flex;
+            align-items: center;
+        }
+        ion-input {
+            flex: 0.5;
+        }
+    }
+    h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: 900;
+        opacity: 0.3;
+    }
+    span {
+        color: #718096;
+        margin: 0;
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    ion-button {
+        --background: var(--ion-custom-dark-green);
+        width: 150px;
+    }
+    button {
+        background: none;
+    }
+    
+    .spacer {
+        padding: 20px;
+    }
+    img {
+        background: url(../../../assets/icon/undraw_suburbs_8b83.png) no-repeat top center/cover;
+        height: 40%;
+        width: 100%;
+        opacity: 0.3;
+        transform: translateY(-40%);
+        z-index: -99999;
+    }
+    .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .or {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .slide {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 0.5rem 4rem;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            color: #718096;
+            font-size: 0.8rem;
+            font-weight: 400;
+
+            ion-toggle {
+                width: 3rem;
+            }
+        }
+    }
+    
+}

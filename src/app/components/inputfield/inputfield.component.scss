@@ -1,0 +1,17 @@
+
+    ion-input {
+        --padding-bottom: 0.1rem;
+        --placeholder-font-weight: 600;
+        --placeholder-color: #718096;
+        --placeholder-margin-bottom: 0.1rem;
+        font-size: 0.6rem;
+    }
+    ion-item {
+        // --border-color: var(--ion-custom-primary-grey);
+        --padding-start: 0;
+        --padding-bottom: 0;
+        margin-bottom: 0.6rem;
+    }
+    .ios,.item-has-focus{
+        --highlight-background: var(--ion-custom-primary-yellow);
+     } 

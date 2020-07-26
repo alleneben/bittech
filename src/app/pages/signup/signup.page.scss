@@ -1,0 +1,180 @@
+$bgColor: #3a3d55;
+$slideBgColor: rgba(255,255,255,0.3);
+$slideBallColor: white;
+$slideBallIconColor: black;
+$slideTextColor: #3a3d55;
+
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin nonselect {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+	cursor: default;
+}
+
+ion-content {
+    --background: #fff;
+    --padding-top: 1.5rem;
+    --padding-start: 1.2rem;
+    --padding-end: 1.2rem;
+    // --padding-bottom: 1rem;
+
+
+    // #button-background {
+    //     position: relative;
+    //     background-color: $slideBgColor;
+    //     width: 400px;
+    //     height: 80px;
+    //     border: white;
+    //     border-radius: 40px;
+    //     @include center;
+    // }
+    // #slider {
+    //     transition: width 0.3s, border-radius 0.3s, height 0.3s;
+    //     position: absolute;
+    //     left: -10px;
+    //     background-color: $slideBallColor;
+    //     width: 100px;
+    //     height: 100px;
+    //     border-radius: 50%;
+    //     cursor: pointer;
+    //     @include center;
+
+    //     &.unblocked {
+    //         transition: all 0.3s;
+    //         width: inherit;
+    //         left: 0 !important;
+    //         border-radius: inherit;
+    //     }
+    // }
+    // #locker {
+    //     color: $slideBallIconColor;
+    //     font-size: 50px;
+    //     @include nonselect;
+    // }
+    // .slide-text {
+    //     color: $slideTextColor;
+    //     font-size: 24px;
+    //     text-transform: uppercase;
+    //     font-family: 'Roboto', sans-serif;
+    //     @include nonselect;
+    // }
+    .top {
+        display: flex;
+        margin-bottom: 0.6rem;
+        align-items: center;
+        // justify-content: space-between;
+        
+        p {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--ion-custom-primary-red);
+        }
+
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius:100%;
+            width:70px;
+            height:70px;
+            margin-right: 10px;
+        }
+    }
+
+
+    ion-input,ion-datetime {
+        --padding-bottom: 0.1rem;
+        --placeholder-font-weight: 300;
+        --placeholder-color: #718096;
+        --placeholder-margin-bottom: 0.1rem;
+        font-size: 1rem;
+    }
+    ion-item {
+        --border-color: var(--ion-custom-primary-blue);
+        --border-width: 0 0 0.08rem 0;
+        --padding-start: 0;
+        --padding-bottom: 0;
+        margin-bottom: 0.3rem;
+    }
+
+    .card {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        z-index: 999;
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+        }
+        
+    }
+    .laptop {
+        background: url(../../../assets/icon/undraw_secure_login_pdn4.png) no-repeat top center/cover;
+        height: 120px;
+        width: 150px;
+        opacity: 0.3;
+    }
+    .two {
+        display: flex;
+        justify-content: space-between;
+        ion-item {
+            flex: 0.5;
+            display: flex;
+            align-items: center;
+        }
+        ion-input {
+            flex: 0.5;
+        }
+    }
+    h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: 900;
+    }
+    span {
+        color: var(--ion-custom-primary-red);
+        margin: 0;
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    ion-button {
+        --background: var(--ion-custom-primary-green);
+        --border-radius: 200px;
+        width: 100px;
+    }
+    button {
+        background: none;
+    }
+    .btn {
+        display: flex;
+        align-items: flex-end;
+    }
+    .spacer {
+        padding: 20px;
+    }
+    img {
+        // background: url(../../../assets/icon/undraw_suburbs_8b83.png) no-repeat top center/cover;
+        // height: 40%;
+        // width: 100%;
+        opacity: 0.3;
+        // transform: translateY(-40%);
+        // z-index: -99999;
+    }
+    // ios classes
+    
+}
