@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+    <div class="top">
+        <div class="logo"></div>
+        <p>My First Platform</p>
+    </div>
+    <div class="card">
+        <div class="card-top">
+            <div class="card-title">
+                <h1>Login</h1>
+            </div>
+            <div class="laptop"></div>
+        </div>
+
+        <ion-listing>
+            <ion-item>
+                <ion-label position="floating">username</ion-label>
+                <ion-input></ion-input>
+                <button>
+                    <ion-icon slot="end" name="person-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">password</ion-label>
+                <ion-input></ion-input>
+                <button>
+                    <ion-icon slot="end" name="eye-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <div class="btns">
+                <!-- <div class="slide"> -->
+                    <ion-toggle (click)="navigate('/home')"></ion-toggle>
+                    Slide to login
+                <!-- </div> -->
+                <div class="or">
+                    <span>|</span>
+                    <span>or</span>
+                    <span>|</span>
+                </div>
+                <ion-button (click)="navigate('/signup')">Register</ion-button>
+            </div>
+        </ion-listing>
+    </div>
+    <br/>
+    <!-- <div class="bg"> -->
+        <img src="../../../assets/icon/undraw_suburbs_8b83.png" alt="" srcset="">
+    <!-- </div> -->
+</ion-content>

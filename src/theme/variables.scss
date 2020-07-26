@@ -74,6 +74,16 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  // custom olors
+  --ion-custom-primary-blue: rgb(75,55,252);
+  --ion-custom-primary-green: rgb(19,203,13);
+  --ion-custom-dark-green: rgb(117,158,52);
+  --ion-custom-primary-red: rgb(246,6,6);
+  --ion-custom-primary-grey: rgb(193,193,193);
+  --ion-custom-grey-dark: rgb(189,189,189);
+  --ion-custom-facebook-blue: rgb(64,91,183);
+  --ion-custom-google-red: rgb(228,56,56);
 }
 
 @media (prefers-color-scheme: dark) {

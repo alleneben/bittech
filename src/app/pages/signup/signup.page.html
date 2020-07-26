@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true">
+    <div class="top">
+        <!-- <div class="box">
+            <ion-icon name="chevron-back-outline"></ion-icon>                                     
+        </div>
+        Sign Up
+        <div></div> -->
+        <div class="logo"></div>
+        <p>My First Platform</p>
+    </div>
+    <!-- <div id="button-background">
+            <span class="slide-text">Swipe</span>
+            <div id="slider" (touchstart)="slide($event)" (touchend)="slide($event)">
+               <ion-icon id="locker" name="chevron-forward-outline"></ion-icon>
+                
+            </div>
+        </div> -->
+    <div class="card">
+        <div class="card-top">
+            <div class="card-title">
+                <h1>SignUp</h1>
+                <p><span>*</span> -field is required</p>
+            </div>
+            <div class="laptop"></div>
+        </div>
+
+        <ion-item>
+            <ion-input placeholder="Full Name"></ion-input>
+            <button>
+                <ion-icon slot="end" name="person-outline"></ion-icon>
+            </button>
+        </ion-item>
+        <ion-item>
+            <ion-datetime placeholder="Date of Birth" displayFormat="YYYY-MM-DD" min="1970-01-01" max="2020-12-31"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="Gender"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="Phone number" type="number"></ion-input>
+            <button>
+                <ion-icon slot="end" name="call-outline"></ion-icon>
+            </button>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="Country"></ion-input>
+        </ion-item>
+        <div class="two">
+            <ion-item>
+                <ion-input placeholder="District"></ion-input>
+            </ion-item>
+            <div class="spacer"></div>
+            <ion-item>
+                <ion-input placeholder="District"></ion-input>
+            </ion-item>
+        </div>
+        <div class="two">
+            <ion-item>
+                <ion-input placeholder="District"></ion-input>
+            </ion-item>
+            <div class="spacer"></div>
+            <ion-item>
+                <ion-input placeholder="District"></ion-input>
+            </ion-item>
+        </div>
+        <div class="two">
+            <ion-item>
+                <ion-input placeholder="District"></ion-input>
+            </ion-item>
+            <div class="spacer"></div>
+            <ion-input placeholder="District"></ion-input>
+        </div>
+        <div class="btn">
+            <ion-button mode="ios" (click)="navigate('/login')">Next</ion-button>
+        </div>
+    </div>
+    <br/>
+    <!-- <div class="bg"> -->
+        <img src="../../../assets/icon/undraw_suburbs_8b83.png" alt="" srcset="">
+    <!-- </div> -->
+</ion-content>
