@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'news',
+    loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'suggestion',
+    loadChildren: () => import('./pages/suggestion/suggestion.module').then( m => m.SuggestionPageModule)
+  },
+  {
+    path: 'volunteer',
+    loadChildren: () => import('./pages/volunteer/volunteer.module').then( m => m.VolunteerPageModule)
+  },
 ];
 @NgModule({
   imports: [
