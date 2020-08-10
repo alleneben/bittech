@@ -86,8 +86,12 @@ ion-content {
     .spacer {
         padding: 1rem 0;
     }
+    .spacerS {
+        padding: 0.5rem 0;
+    }
     .suggestionbox {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        // box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         padding: 1rem 1rem;
         text-align: center;
         text-transform: uppercase;
@@ -97,79 +101,70 @@ ion-content {
         line-height: 0.5rem;
     }
     .form {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        padding-top: 1.5rem;
-        padding-left: 1rem;
-        ion-label {
-            opacity: 0.3;
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-        }
-        ion-textarea{
-            --placeholder-opacity: 0.3;
-            font-size: 0.9rem;
-        }
-        
-        ion-item {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin: 0.8rem 0.8rem 1.5rem 0;
-        }
-        .submit {
-            transform: translateX(150%);
-            --background: #08ce57;
-            height: 2rem;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-    }
-    .card-support {
-        // height: 100px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        background-color: #ff8e2b;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2px 0 10px 0;
-        border-radius: 20px;
-
-        .title {
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        p {
-            margin: 0;
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .mobile {
-                background-color: #fff;
-                border-radius: 20px;
-                height: 80px;
-                width: 80px;
-                margin: 0 10px 0 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding-top: 1.5rem;
+            padding-left: 1rem;
+    
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 0.6rem;
+    
             }
-            .message {
-                font-weight: 400;
-
-                p {
-                    font-size: 0.8rem;
+            ion-label {
+                opacity: 0.5;
+                font-size: 0.8rem;
+            }
+            ion-col {
+                padding: 0;
+                margin: 0;
+            }
+            ion-radio {
+                border-radius: 100%;
+                height: 20px;
+                width: 20px;
+                margin: 5px;
+            }
+            .radio-custom, .check-custom {
+                display: flex;
+                .radio-item {
+                    display: flex;
+                    align-items: center;
+                    flex: 0.60;
+                }
+                .radio-item-right {
+                    display: flex;
+                    align-items: center;
+                    flex: 0.40;
                 }
             }
-            .support-btn {
-                --background: #9f0a86;
-                height: 20px;
-                font-size: 0.6rem;
+            .apply {
+                display: flex;
+                flex-direction: column;
+                p {
+                    margin-right: 3px;
+                }
+                .check-item {
+                    display: flex;
+                    align-items: center;
+                    flex: 0.50;
+                    margin: 5px;
+                }
+                .check-item-right {
+                    display: flex;
+                    align-items: center;
+                    flex: 0.50;
+                }
+            }
+            .submit {
+                transform: translateX(180%);
+                --background: #08ce57;
+                height: 2rem;
+                font-size: 0.9rem;
+                font-weight: 700;
+                margin: 1rem 0;
             }
         }
-        
-    }
 
     .campaign {
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -229,4 +224,11 @@ ion-content {
             }
         }
     }
+    ion-checkbox {
+        --size: 20px;
+        --border-color: black;
+        // border: 1px solid black;
+        margin-right: 5px;
+    }
 }
+

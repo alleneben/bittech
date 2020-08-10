@@ -1,0 +1,199 @@
+<ion-content [fullscreen]="true">
+  <div class="top">
+    <div class="left">
+      <div class="box">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="news-icon">
+      <img src="../../../assets/icon/icons8-hint-64.png" alt="" srcset="">
+      VOLUNTEER
+    </div>
+    <div class="right">
+      <div class="profile"></div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <div class="suggestionbox">
+    volunteer with us
+  </div>
+  <div class="spacerS"></div>
+
+  <div class="form">
+    <ion-label position="floating">which position interest you?</ion-label>
+
+    <ion-radio-group value="deliverymode" (ionChange)="devmode($event)">
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Community development</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Campaign executive</p>
+        </div>
+      </div>
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Executive assistant at your constituenty</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>event organiser</p>
+        </div>
+      </div>
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>pupils teacher</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>fashion designer</p>
+        </div>
+      </div>
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>sanitation officer</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Campaign organiser</p>
+        </div>
+      </div>
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Sales executive</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Youth rally hypers</p>
+        </div>
+      </div>
+    </ion-radio-group>
+
+    <div class="spacer"></div>
+
+    <ion-label position="floating">I am available?</ion-label>
+    <p>check all that apply</p>
+    <div class="apply">
+      <div class="check-custom">
+        <div class="check-item">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Mornings (Mon-Fri)</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Afternoon (Mon-Fri)</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Weekend</p>
+        </div>
+      </div>
+      <div class="check-custom">
+        <div class="check-item">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Once a Week</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>One time Only</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>As Needed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+    <ion-label position="floating">Do you have a valid Driver's License?</ion-label>
+    <ion-radio-group value="deliverymode" (ionChange)="devmode($event)">
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Yes</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>No</p>
+        </div>
+      </div>
+    </ion-radio-group>
+
+    <ion-label position="floating">I could serve more than one Person</ion-label>
+    <ion-radio-group value="deliverymode" (ionChange)="devmode($event)">
+      <div class="radio-custom">
+        <div class="radio-item">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>Yes</p>
+        </div>
+        <div class="radio-item-right">
+          <ion-radio slot="start" value="1"></ion-radio>
+          <p>No</p>
+        </div>
+      </div>
+    </ion-radio-group>
+
+    <ion-label position="floating">How many languages can you speak? check that apply</ion-label>
+    <div class="apply">
+      <div class="check-custom">
+        <div class="check-item">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>English</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>French</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Twi</p>
+        </div>
+      </div>
+      <div class="check-custom">
+        <div class="check-item">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Ga</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Hausa</p>
+        </div>
+        <div class="check-item-right">
+          <ion-checkbox checked="false"></ion-checkbox>
+          <p>Fante</p>
+        </div>
+      </div>
+    </div>
+    <ion-button class="submit">Submit</ion-button>
+  </div>
+  
+  <div class="spacer"></div>
+    
+  <div class="campaign">
+    <div class="flag">
+      flag
+    </div>
+    <div class="text">
+      <div class="title">campaign 2020</div>
+      <div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eligendi ipsa optio dolores nihil magni. Veniam, officiis nihil? Sunt, magni?</div>
+      <div class="share">
+        <div class="share-text">support us by sharing</div>
+        <div class="icon">
+          <span>share</span>
+          <div class="icon-img">
+            <ion-icon name="share-social-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+</ion-content>

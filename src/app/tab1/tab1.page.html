@@ -1,17 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="top">
+    <div class="left">
+      <div class="box">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="news-icon">
+      <img src="../../../assets/icon/icons8-hint-64.png" alt="" srcset="">
+      SUGGESTION
+    </div>
+    <div class="right">
+      <div class="profile"></div>
+    </div>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="spacer"></div>
+  <div class="suggestionbox">
+    Suggestion box
+  </div>
+  <div class="spacer"></div>
+  <div class="form">
+    <ion-label position="floating">Suggestion</ion-label>
+    <ion-item>
+      <ion-textarea rows="6" cols="20" placeholder="Enter suggestion here"></ion-textarea>
+    </ion-item>
+
+    <ion-button class="submit">Submit</ion-button>
+  </div>
+  <div class="spacer"></div>
+  
+  <div class="card-support">
+    <div class="title">Support Us</div>
+    <div class="content">
+      <div class="mobile">
+
+      </div>
+      <div class="message">
+        <div class="">
+          <p>Support us by dialing short code</p>
+          <p>and send <strong>SUPPORT</strong> to *712*13#</p>
+          <p>airtime 0.50p <ion-button class="support-btn">Support us</ion-button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="campaign">
+    <div class="flag">
+      flag
+    </div>
+    <div class="text">
+      <div class="title">campaign 2020</div>
+      <div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eligendi ipsa optio dolores nihil magni. Veniam, officiis nihil? Sunt, magni?</div>
+      <div class="share">
+        <div class="share-text">support us by sharing</div>
+        <div class="icon">
+          <span>share</span>
+          <div class="icon-img">
+            <ion-icon name="share-social-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
 </ion-content>
+  

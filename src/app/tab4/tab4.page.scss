@@ -1,128 +1,32 @@
-@mixin center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ion-toolbar {
+    --color: #ffffff; 
+    --background: #2ecc71;
+    height: 60px;
+    ion-button,
+    ion-back-button {
+      --color: #fff;
+    }
+    ion-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+  }
 }
-@mixin space-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@mixin space-around {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-@mixin columncenter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
 ion-content {
     --background: #fff;
     --padding-top: 1.5rem;
     --padding-start: 1.2rem;
     --padding-end: 1.2rem;
     
-    .top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .left {
-            @include center();
-            .box {
-                @include center();
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-                border-radius:100%;
-                width:25px;
-                height:25px;
-                margin-right: 5px;
-                cursor: pointer;
-                ion-icon {
-                    color: #fc030b;
-                }
-            }
-            .name {
-                @include columncenter();
-                opacity: 0.5;
-
-                p {
-                    margin: 0;
-                }
-            }
-        }
-
-        .right {
-            @include center();
-            
-            ion-icon, .profile {
-                margin-right: 10px;
-                font-size: 1.2rem;
-                opacity: 0.4;
-            }
-            .profile {
-                background: brown;
-                height: 30px;
-                width: 30px;
-                border-radius: 100%;
-            }
-        }
-        .news-icon {
-            @include center();
-            font-weight: 800;
-            font-size: 12px;
-            img {
-                height: 30px;
-                width: 30px;
-                margin: 0 5px;
-            }
-        }
+    
+    #p {
+        margin: 0;
+        opacity: 0.4;
+        font-size: 0.8rem;
     }
     .spacer {
         padding: 1rem 0;
     }
-    .suggestionbox {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        padding: 1rem 1rem;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: gray;
-        line-height: 0.5rem;
-    }
-    .form {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        padding-top: 1.5rem;
-        padding-left: 1rem;
-        ion-label {
-            opacity: 0.3;
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-        }
-        ion-textarea{
-            --placeholder-opacity: 0.3;
-            font-size: 0.9rem;
-        }
-        
-        ion-item {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin: 0.8rem 0.8rem 1.5rem 0;
-        }
-        .submit {
-            transform: translateX(150%);
-            --background: #08ce57;
-            height: 2rem;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-    }
+
     .card-support {
         // height: 100px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -227,6 +131,53 @@ ion-content {
                     }
                 }
             }
+        }
+    }
+
+    .radio-custom {
+        display: flex;
+        justify-content: space-around;
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            flex: 0.40;
+            p {
+                font-size: 0.7rem;
+                // margin-right: 5px;
+            }
+            ion-radio {
+                border-radius: 100%;
+                height: 15px;
+                width: 15px;
+                margin: 5px;
+            }
+        }
+        .radio-item-right {
+            display: flex;
+            align-items: center;
+            flex: 0.60;
+            p {
+                font-size: 0.7rem;
+            }
+            ion-radio {
+                border-radius: 100%;
+                height: 15px;
+                width: 15px;
+                margin: 5px;
+            }
+        }
+        
+    }
+
+    .transfer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ion-item {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
         }
     }
 }
