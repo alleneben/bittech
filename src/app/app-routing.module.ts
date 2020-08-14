@@ -38,7 +38,27 @@ const routes: Routes = [
   {
     path: 'donate',
     loadChildren: () => import('./pages/donate/donate.module').then( m => m.DonatePageModule)
+  },  {
+    path: 'authentication',
+    loadChildren: () => import('./pages/authentication/authentication.module').then( m => m.AuthenticationPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'messages',
+    loadChildren: () => import('./pages/messages/messages.module').then( m => m.MessagesPageModule)
+  },
+  {
+    path: 'apply',
+    loadChildren: () => import('./pages/apply/apply.module').then( m => m.ApplyPageModule)
+  },
+  {
+    path: 'complaints',
+    loadChildren: () => import('./pages/complaints/complaints.module').then( m => m.ComplaintsPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

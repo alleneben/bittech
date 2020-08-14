@@ -1,0 +1,122 @@
+<ion-content>
+
+  <!-- page setup -->
+  <div style="background-color: white; height: 100%;">
+
+    <!-- row 1 with ghana flag background image -->
+    <div style="position: relative; height: 13%; z-index: 1;">
+
+      <div
+        style="position: absolute; z-index: -1; top: 0; bottom: 0;left: 0;right: 0;background: url('../../../assets/img/ghana\ flag.jpg') no-repeat center center;opacity: .2;background-size: cover;width: 100%;height: 100%;">
+      </div>
+
+      <div style="display: flex; height: 100%;">
+        <!-- left arrow div -->
+        <div style="width: 10%;">
+          <ion-icon name="chevron-back-circle" style="color:red; font-size: xx-large;"></ion-icon>
+        </div>
+
+        <!-- apply logo and text -->
+        <div style=" width: 70%; display: flex; justify-content: center; align-items: center; ">
+          <div>
+            <img src="../../../assets/icon/icons8-apply-80.png" style="width: 35px; height:35px;" />
+          </div>
+          <div style="padding-left: 5px;">
+            <b>APPLY</b>
+          </div>
+        </div>
+
+        <!-- thumbnail -->
+        <div style="width: 20%; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px;">
+          <img src="../../../assets/img/head.png" style="width: 50px; height:50px; border-radius: 30px;" />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- rest of page -->
+    <div style="background-color: yesllow; height: 87%; padding:10px">
+
+      <ion-card style="margin: 0px;">
+        <ion-card-content style="text-align: center; font-weight: bold;">
+          APPLY TO BE A CANDIDATE
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card style="margin-top: 10px; margin-left: 0px;margin-right: 0px;">
+        <ion-card-content style="padding: 0px;">
+
+
+          <div style="text-align: center; padding-top: 5px; padding-bottom: 10px;">
+            <img src="../../../assets/icon/icons8-apply-80.png" style="width: 40px; height:40px;" />
+            <h4>MY FIRST APPLICATION</h4>
+            <h4>APPLICATION FORM</h4>
+          </div>
+
+
+
+          <span style="padding-left: 20px; font-size: medium;">full name</span>
+
+          <ion-card
+            style="min-height: 30px; max-height: 50px; margin-top: 0px; background-color: #F5F5F5; border-radius: 5px;">
+            <ion-card-content style="padding: 7px;">
+              JOHN SMITH
+            </ion-card-content>
+          </ion-card>
+
+          <ion-list lines="inset">
+
+            <ion-item style="padding-bottom: 10px;">
+              <ion-label style="font-size: medium;margin:0px">Choose Position</ion-label>
+              <ion-select placeholder="">
+                <ion-select-option value="y">Yes</ion-select-option>
+                <ion-select-option value="n">No</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item style="padding-bottom: 10px;">
+              <ion-label style="font-size: medium;margin:0px">Have you been vetted by your party?
+              </ion-label>
+              <ion-select placeholder="">
+                <ion-select-option value="y">Yes</ion-select-option>
+                <ion-select-option value="n">No</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-card style="margin-left: 10px; margin-right: 10px; margin-top: 5px; border-radius: 0px;">
+              <ion-card-content style="padding-top: 0px; padding-left: 5px;">
+                <ion-textarea rows="3" cols="20" placeholder="mission statement"></ion-textarea>
+              </ion-card-content>
+            </ion-card>
+
+            <ion-card style="margin-left: 10px; margin-right: 10px; border-radius: 0px; margin-top: -15px;">
+              <ion-card-content style="padding-top: 0px; padding-left: 5px;">
+                <ion-textarea rows="3" cols="20" placeholder="vision statement"></ion-textarea>
+              </ion-card-content>
+            </ion-card>
+
+            <div style="display: flex;">
+              <div style=" width: 40%; display: flex; align-items: center; padding-left: 10px;">
+                <span>choose image</span>
+              </div>
+
+              <div style="width: 30%;">
+                <img src="../../../assets/img/head.png" style="width: 90px; height:90px;" />
+              </div>
+
+              <div style=" width: 30%;  display:flex; align-items: center; justify-content: center;">
+                <ion-button color="success" size="small" shape="round">Next</ion-button>
+              </div>
+            </div>
+
+          </ion-list>
+
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+
+  </div>
+
+</ion-content>
