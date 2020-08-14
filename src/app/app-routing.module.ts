@@ -50,6 +50,14 @@ const routes: Routes = [
     path: 'messages',
     loadChildren: () => import('./pages/messages/messages.module').then( m => m.MessagesPageModule)
   },
+  {
+    path: 'apply',
+    loadChildren: () => import('./pages/apply/apply.module').then( m => m.ApplyPageModule)
+  },
+  {
+    path: 'complaints',
+    loadChildren: () => import('./pages/complaints/complaints.module').then( m => m.ComplaintsPageModule)
+  },
 
 ];
 @NgModule({

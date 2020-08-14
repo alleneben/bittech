@@ -1,0 +1,153 @@
+<ion-content>
+
+  <!-- page setup -->
+  <div style="background-color: white; height: 100%;">
+
+    <!-- row 1 with ghana flag background image -->
+    <div style="position: relative; height: 13%; z-index: 1;">
+
+      <div
+        style="position: absolute; z-index: -1; top: 0; bottom: 0;left: 0;right: 0;background: url('../../../assets/img/ghana\ flag.jpg') no-repeat center center;opacity: .2;background-size: cover;width: 100%;height: 100%;">
+      </div>
+
+      <div style="display: flex; height: 100%;">
+        <!-- left arrow div -->
+        <div style="width: 10%;">
+          <ion-icon name="chevron-back-circle" style="color:red; font-size: xx-large;"></ion-icon>
+        </div>
+
+        <!-- apply logo and text -->
+        <div style=" width: 70%; display: flex; justify-content: center; align-items: center; ">
+          <div>
+            <img src="../../../assets/icon/icons8-apply-80.png" style="width: 35px; height:35px;" />
+          </div>
+          <div style="padding-left: 5px;">
+            <b>Contact Us</b>
+          </div>
+        </div>
+
+        <!-- thumbnail -->
+        <div style="width: 20%; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px;">
+          <img src="../../../assets/img/head.png" style="width: 50px; height:50px; border-radius: 30px;" />
+          <ion-icon name="chevron-down-circle" style="color:black; font-size: xx-large; padding-top: 10px;"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- rest of page -->
+    <div style="background-color: yesllow; height: 87%; padding:0px;">
+
+      <div>
+        <img src="../../../assets/icon/undraw_secure_login_pdn4.png" style="width: 100%; min-height: 250px;" />
+      </div>
+
+      <div style="display: flex;  padding:0px; margin:0px;width:100%;
+      text-align:center;">
+
+        <div style="width: calc(100% / 3);  
+          display: inline-block;
+          vertical-align: middle;  
+          border-radius: 15px;
+          /* box-shadow:1px 1px 1px 1px gray; */
+           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          text-align:center;
+          margin:2%;    
+          ">
+          <div style="padding-top:10px">
+            <img src="../../../assets/icon/icons8-clock-500.png" style="width: 50px; height:50px;" /></div>
+          <div>
+            <p style="margin-top: 0px; font-size: small;">Call us</p>
+          </div>
+        </div>
+
+        <div style="width: calc(100% / 3);  
+        display: inline-block;
+        vertical-align: middle;  
+        border-radius: 15px;
+        /* box-shadow: inset 0 0 10px gray; */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        text-align:center;
+        margin:2%;    
+        ">
+          <div style="padding-top:10px">
+            <img src="../../../assets/icon/icons8-clock-500.png" style="width: 50px; height:50px;" /></div>
+          <div>
+            <p style="margin-top: 0px; font-size: small;">Make a complaint</p>
+          </div>
+        </div>
+
+        <div style="width: calc(100% / 3);  
+      display: inline-block;
+      vertical-align: middle;  
+      /* border: 1px solid #77aaff;
+    box-shadow:  -2px 2px #77aaff,
+         -2px 2px #77aaff,
+         -2px 2px #77aaff,
+         -2px 2px #77aaff,
+         -2px 2px #77aaff; */
+         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      border-radius: 15px;
+      text-align:center;
+      margin:2%;    
+      ">
+          <div style="padding-top:10px">
+            <img src="../../../assets/icon/icons8-clock-500.png" style="width: 50px; height:50px;" /></div>
+          <div>
+            <p style="margin-top: 0px; font-size: small;">View all complaints</p>
+          </div>
+        </div>
+
+      </div>
+
+      <ion-card style="margin-top: 10px; margin-bottom: 0px; margin-left: 0px;margin-right: 0px; border-top-left-radius: 25px; 
+        border-top-right-radius: 25px;">
+        <ion-card-content style="padding: 0px;">
+
+
+          <div style="text-align: center; padding-top: 5px; padding-bottom: 10px;">
+            <h3 style="font-weight: bold;">Quick Contact</h3>
+          </div>
+
+
+          <div>
+            <span style="padding-left: 20px; font-size: medium;">Name</span>
+            <ion-card style="min-height: 30px; max-height: 50px; margin-top: 0px; border-radius: 5px;">
+              <ion-card-content style="padding: 7px;">
+                <ion-input placeholder="Enter your full Name here"></ion-input>
+              </ion-card-content>
+            </ion-card>
+          </div>
+
+          <div style=" margin-top: -5px;">
+            <span style="padding-left: 20px; font-size: medium;">Email</span>
+            <ion-card style="min-height: 30px; max-height: 50px; margin-top: 0px; border-radius: 5px;">
+              <ion-card-content style="padding: 7px;">
+                <ion-input placeholder="Enter your email here"></ion-input>
+              </ion-card-content>
+            </ion-card>
+          </div>
+
+          <div style="margin-top: -5px;">
+            <span style="padding-left: 20px; font-size: medium;">Message</span>
+            <ion-card style=" margin-top: 5px; border-radius: 0px;">
+              <ion-card-content style="padding-top: 0px; padding-left: 5px;">
+                <ion-textarea rows="3" cols="20" placeholder="type your message here"></ion-textarea>
+              </ion-card-content>
+            </ion-card>
+          </div>
+
+          <div style="display: flex; text-align: center; justify-content: center; margin-top: -15px;">
+            <ion-button expand="full" color="success" size="default">
+              Send</ion-button>
+          </div>
+
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+
+  </div>
+
+</ion-content>
