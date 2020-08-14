@@ -1,104 +1,40 @@
 <ion-content>
 
-  <ion-card style="border-radius:15px;">
-
-    <div style="padding-right: 3px;padding-top: 3px;margin:0;">
-      <button ion-button icon-only round small color='light'
-        style="float: right; text-align: right;padding:0px; width: 20px; height: 20px; margin: 0px;">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </div>
-
+  <ion-card class="profile-card">
     <ion-grid>
-      <ion-row>
-        <ion-col size="4" style="align-self: center;padding-left: 20px; padding-top: 0px;">
-          <img src="../../../assets/img/head.png" style="height: 100px; width: 100px; border-radius: 120px;" />
-        </ion-col>
-
-        <ion-col style=" padding-left: 20px; ">
-
-          <ion-row>
-            <h2 style="font-weight: bold;">John Smith</h2>
-          </ion-row>
-
-          <ion-row style="padding-top: 10px;">
-            <span style="font-size: 10px;">+233 57 234 2344</span> <span
-              style="font-size: 11px;font-weight: bold; padding-left: 10px;">greateplatform@gmail.com</span>
-          </ion-row>
-
-          <ion-row style="padding-top: 10px;">
-            <button color='dark' ion-button small style="border-radius: 20px; margin: 0px;">edit profile</button>
-            <button color='dark' clear small ion-button icon-end style="margin: 0px;">
-              settings
-              <ion-icon name="settings"></ion-icon>
-            </button>
-
-            <ion-avatar item-start>
-              <img src="../../../assets/img/head.png" style="width: 40px;height: 40px; border-radius: 30px;">
-            </ion-avatar>
-          </ion-row>
-
-        </ion-col>
+      <ion-row id="close" (click)="navigate('pop')">
+        <ion-icon  name="close"></ion-icon>
       </ion-row>
-    </ion-grid>
 
+      <div class="profile-details">
+        <img src="../../../assets/img/head.png" alt="">
+        <div class="profile-text">
+          <p id="name">John Smith</p>
+          <p id="mobile">+233 45 456 6789 <span>alleneben@gmail.com</span></p>
+
+          <div class="profile-buttons">
+            <ion-button class="edit">edit profile</ion-button>
+            <ion-button class="settings">settings <ion-icon name="settings"></ion-icon></ion-button>
+            <img src="../../../assets/img/head.png" alt="">
+          </div>
+        </div>
+      </div>
+    </ion-grid>
   </ion-card>
 
-  <ion-list no-lines style="padding-left: 25px;">
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="home" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">HOME</span>
+  <ion-list no-lines style="padding-left: 25px;" class="menu-items">
+    <ion-item style="margin-bottom: -5px;" *ngFor="let item of items" (click)="navigate(item.path)">
+      <img src="../../../assets/icon/{{item.img}}" alt="">
+      <span style="font-size: small; font-weight: bold; opacity: 0.7;">{{item.name}}</span>
     </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">APPLY</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">SUGGESTION BOX</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">VOLUNTEER</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">ABOUT US</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">NEWS</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="text" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">MESSAGES</span>
-      <ion-badge color='danger' item-end style="margin-right: 40px;"> 2</ion-badge>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">SUPPORT</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">DONATE</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">COMPLAINTS</span>
-    </ion-item>
-    <ion-item style="margin-bottom: -5px;">
-      <ion-icon name="leaf" item-start></ion-icon>
-      <span style="font-size: small; font-weight: bold;">EVENTS / PROGRAMS</span>
-    </ion-item>
-
   </ion-list>
 
-  <div style="text-align: right;padding-right: 10px;">
+  <div style="text-align: right;padding-right: 10px;opacity: 0.5;">
     <span style="font-size: small; font-weight: bold; ">App version v1.0</span>
   </div>
-
+<!-- 
   <div style="position: absolute;bottom: 0;">
     <img src="../../../assets/icon/undraw_secure_login_pdn.png" style="height: 150px; width: 100%;" />
-  </div>
+  </div> -->
 
 </ion-content>

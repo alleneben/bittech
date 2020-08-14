@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { UtilService } from '../util.service';
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor(private usv: UtilService) {}
 
+
+  navigate(path:string){
+    this.usv.navigate(path)
+  }
 }

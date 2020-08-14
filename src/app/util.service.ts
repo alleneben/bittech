@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ToastController,LoadingController } from '@ionic/angular';
+import { ToastController,LoadingController, NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
 
@@ -9,10 +9,14 @@ import { Router } from '@angular/router';
 })
 export class UtilService {
   loading:boolean = false;
-  constructor(private toastctrl: ToastController,public loadingController: LoadingController,private storage: Storage, private router: Router) { }
+  constructor(private toastctrl: ToastController,public loadingController: LoadingController,private storage: Storage, private router: Router, private navCtrl: NavController) { }
 
   navigate(path:string){
       return this.router.navigate([path]);
+  }
+
+  pop(){
+    return this.navCtrl.pop();
   }
 
   async displayToast(msg:any,dur:any,anm:any,cls:any,pos:any) {

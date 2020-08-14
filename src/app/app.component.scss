@@ -1,0 +1,57 @@
+ion-content {
+    .container {
+        background-color: white;
+
+        //1. make the div a grid
+        display: grid;
+        height: 100%; //required for the heights of rows and columns in the grid to take effect
+        // width: 100%;
+
+        //2. define the number of columns and number of rows u want
+        //number of values u assign to the rows or columns determines the number u want and
+        // how wide we want our cols or how tall we want the rows
+        // grid-template-columns: 100px;
+        // grid-template-rows: 20% 60% 40%;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+
+        //3.define padding between rows and columns
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+
+    .item1 {
+        background-color: red;
+        max-width: 100%;
+
+        //3. define which grid line u want each item to start and end on (grid lines are imaginary lines between the boxes starting from the margin)
+        //maximum column grid line is 4
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .item2 {
+        background-color: yellow;
+        max-width: 100%;
+    }
+
+    .item3 {
+        background-color: green;
+        max-width: 100%;
+        // grid-row-start: 2;
+        // grid-row-end: 4;
+    }
+
+    .item4 {
+        background-color: blue;
+        // grid-column-start: 2;
+        // grid-column-end: 4;
+    }
+
+    .item5 {
+        background-color: violet;
+    }
+
+    .item6 {
+        background-color: orange;
+    }
+}

@@ -1,0 +1,189 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin columncenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+ion-content {
+    --background: #fff;
+    .container {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+    background: url('../../../assets/img/ghana\ flag.jpg') no-repeat center center;
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: url('../../../assets/img/ghana\ flag.jpg') no-repeat center center;
+        height: 100px;
+
+        .left {
+            @include center();
+            .box {
+                @include center();
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                border-radius:100%;
+                width:25px;
+                height:25px;
+                margin-right: 5px;
+                cursor: pointer;
+                ion-icon {
+                    color: #fc030b;
+                }
+            }
+            .name {
+                @include columncenter();
+                opacity: 0.5;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .right {
+            @include center();
+            
+            ion-icon, .profile {
+                margin-right: 10px;
+                font-size: 1.2rem;
+                opacity: 0.4;
+            }
+            .profile {
+                background: brown;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+            }
+        }
+        .news-icon {
+            @include center();
+            font-weight: 800;
+            img {
+                height: 20px;
+                width: 20px;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .who-we-are {
+        opacity: 0.7;
+        margin-bottom: 0.3rem;
+        .line {
+            height: 3px;
+            width: 110px;
+            background-color: #fc030b;
+        }
+        p {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .spacer {
+        padding: 1rem 0;
+    }
+    .main-stories {
+        display: flex;
+        justify-content: space-between;
+
+        .back,.forward {
+            // @include center();
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius:100%;
+            width:25px;
+            height:25px;
+            margin-right: 5px;
+            color: #fc030b;
+        }
+    }
+    .news-spacer {
+        padding: 0.5rem 0;
+    }
+
+    .card-news {
+        height: 200px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);    
+        color: #fff;
+        .card_title {
+            height: 40px;
+            background: rgba(0,0,0,0);
+            color: #fff;
+            padding: 5px 15px;
+        }
+        .card_image {
+            width: 100%;
+            height: inherit;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            // align-items: center;
+            text-align: left;
+            p{
+                margin: 0;
+                padding-left: 30px;
+                font-size: 0.8rem;
+                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                
+                ion-button {
+                    --background: #fdd600;
+                    width: 110px;
+                    height: 25px;
+                    margin-bottom: 10px;
+                }
+                #trending {
+                    --background: #fc030b;
+                }
+            }
+        }
+        .controls {
+            @include space-around();
+
+            .views,.admin {
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+                @include center();
+
+                ion-icon {
+                    color: white;
+                }
+            }
+            .views-main,.admin-main {
+                @include space-between();
+                margin-right: 10px;
+                p {
+                    margin: 5px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

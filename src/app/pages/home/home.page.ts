@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UtilService } from '../../util.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(private usv: UtilService) { }
 
   ngOnInit() {
   }
 
+  navigate(path:any){
+    console.log(path);
+    
+    this.usv.navigate(path)
+  }
 }

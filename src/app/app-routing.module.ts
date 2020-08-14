@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'donate',
     loadChildren: () => import('./pages/donate/donate.module').then( m => m.DonatePageModule)
-  },  {
+  },
+  {
     path: 'authentication',
     loadChildren: () => import('./pages/authentication/authentication.module').then( m => m.AuthenticationPageModule)
   },
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'complaints',
     loadChildren: () => import('./pages/complaints/complaints.module').then( m => m.ComplaintsPageModule)
+  },
+  {
+    path: 'events',
+    loadChildren: () => import('./pages/events/events.module').then( m => m.EventsPageModule)
   },
 
 ];
