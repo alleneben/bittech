@@ -162,8 +162,11 @@
                 </ion-item>
             </div>
         </form>
-        <div class="btn">
-            <ion-button mode="ios" (click)="save()">Next</ion-button>
+        <div class="btn" *ngIf="init">
+            <ion-button mode="ios" (click)="save('init')">Next</ion-button>
+        </div>
+        <div class="btn" *ngIf="final">
+            <ion-button mode="ios" (click)="save('final')">Next</ion-button>
         </div>
     </div>
     <br />

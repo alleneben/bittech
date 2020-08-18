@@ -78,26 +78,50 @@ export class SignupPage implements OnInit {
     }
   }
 
-  save(){
-    if(!this.initform.valid) return this.usv.displayToast(`All fields marked * are required`,3000,true,'danger','top');
-    
-    this.usv.presentLoading()
-    // this.asv.send(this.initform.value,'/registration/register.php')
-    // .subscribe(rd => {
-    //   this.usv.dismissloading()
-    //   let out = rd
-    //   if(out.response){
-    //     this.final = true;
-    //     this.init = false;
-    //   }
-    // },err => {
-    //   this.usv.dismissloading()
-    //   this.usv.displayToast(err.name,2000,'','danger','top')
-    // })
-    let rd = this.asv.simsend('','')
-    if(rd.response){
-      this.final = true;
+  save(context:any){
+    if(context === 'init'){
+      if(!this.initform.valid) return this.usv.displayToast(`All fields marked * are required`,3000,true,'danger','top');
+      
+      this.usv.presentLoading()
+      // this.asv.send(this.initform.value,'/registration/register.php')
+      // .subscribe(rd => {
+      //   this.usv.dismissloading()
+      //   let out = rd
+      //   if(out.response){
+      //     this.final = true;
+      //     this.init = false;
+      //   }
+      // },err => {
+      //   this.usv.dismissloading()
+      //   this.usv.displayToast(err.name,2000,'','danger','top')
+      // })
+      let rd = this.asv.simsend('','')
+      if(rd.response){
+        this.final = true;
         this.init = false;
+        this.usv.dismissloading()
+      }
+    } else {
+      if(!this.finalform.valid) return this.usv.displayToast(`All fields marked * are required`,3000,true,'danger','top');
+      
+      this.usv.presentLoading()
+      // this.asv.send(this.initform.value,'/registration/register.php')
+      // .subscribe(rd => {
+      //   this.usv.dismissloading()
+      //   let out = rd
+      //   if(out.response){
+      //     this.final = true;
+      //     this.init = false;
+      //   }
+      // },err => {
+      //   this.usv.dismissloading()
+      //   this.usv.displayToast(err.name,2000,'','danger','top')
+      // })
+      let rd = this.asv.simsend('','')
+      if(rd.response){
+        this.usv.navigate('/login')
+        this.usv.dismissloading()
+      }
     }
   }
   
