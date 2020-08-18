@@ -7,11 +7,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 
-import { UtilService } from './util.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UtilAppService } from './util.app.service';
+import { UtilService } from './util.service';
+import { APP_CONFIG, BaseAppConfig } from "./util.app.config";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +35,10 @@ import { AppComponent } from './app.component';
     StatusBar,
     SplashScreen,
     UtilService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    UtilAppService,
+    SocialSharing,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {provide: APP_CONFIG, useValue: BaseAppConfig}
   ],
   bootstrap: [AppComponent]
 })

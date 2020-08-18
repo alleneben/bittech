@@ -23,56 +23,74 @@
             </div>
             <div class="laptop"></div>
         </div>
+        <form [formGroup]="signinform" (ngSubmit)="submitForm()" novalidate>
+            <ion-item>
+                <ion-input placeholder="Username" formControlName="username" type="text" required></ion-input>
+                <button>
+                    <ion-icon slot="end" name="person-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Password" formControlName="pass" [type]="passwordtype" required></ion-input>
+                <button>
+                    <ion-icon slot="icon-only" [name]="passwordicon" (click)="hideshowpassword()"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Email" formControlName="email" type="email" required></ion-input>
+                <button>
+                    <ion-icon slot="end" name="at-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <!-- <ion-item>
+                <ion-datetime placeholder="Date of Birth" displayFormat="YYYY-MM-DD" min="1970-01-01" max="2020-12-31" formControlName="" required>
+                </ion-datetime>
+            </ion-item> -->
+            <ion-item>
+                <ion-label position="floating">Gender</ion-label>
+                <ion-select formControlName="gender">
+                    <ion-select-option value="1">Male</ion-select-option>
+                    <ion-select-option value="2">Female</ion-select-option>
+                </ion-select>
+            </ion-item>
 
-        <ion-item>
-            <ion-input placeholder="Full Name"></ion-input>
-            <button>
-                <ion-icon slot="end" name="person-outline"></ion-icon>
-            </button>
-        </ion-item>
-        <ion-item>
-            <ion-datetime placeholder="Date of Birth" displayFormat="YYYY-MM-DD" min="1970-01-01" max="2020-12-31">
-            </ion-datetime>
-        </ion-item>
-        <ion-item>
-            <ion-input placeholder="Gender"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-input placeholder="Phone number" type="number"></ion-input>
-            <button>
-                <ion-icon slot="end" name="call-outline"></ion-icon>
-            </button>
-        </ion-item>
-        <ion-item>
-            <ion-input placeholder="Country"></ion-input>
-        </ion-item>
-        <div class="two">
-            <ion-item>
+            <!-- <ion-item>
+                <ion-input placeholder="Phone number" type="number"></ion-input>
+                <button>
+                    <ion-icon slot="end" name="call-outline"></ion-icon>
+                </button>
+            </ion-item> -->
+            <!-- <ion-item>
+                <ion-input placeholder="Country"></ion-input>
+            </ion-item> -->
+            <!-- <div class="two">
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+                <div class="spacer"></div>
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+            </div> -->
+            <!-- <div class="two">
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+                <div class="spacer"></div>
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+            </div> -->
+            <!-- <div class="two">
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+                <div class="spacer"></div>
                 <ion-input placeholder="District"></ion-input>
-            </ion-item>
-            <div class="spacer"></div>
-            <ion-item>
-                <ion-input placeholder="District"></ion-input>
-            </ion-item>
-        </div>
-        <div class="two">
-            <ion-item>
-                <ion-input placeholder="District"></ion-input>
-            </ion-item>
-            <div class="spacer"></div>
-            <ion-item>
-                <ion-input placeholder="District"></ion-input>
-            </ion-item>
-        </div>
-        <div class="two">
-            <ion-item>
-                <ion-input placeholder="District"></ion-input>
-            </ion-item>
-            <div class="spacer"></div>
-            <ion-input placeholder="District"></ion-input>
-        </div>
+            </div> -->
+        </form>
         <div class="btn">
-            <ion-button mode="ios" (click)="navigate('/login')">Next</ion-button>
+            <ion-button mode="ios" (click)="save()">Next</ion-button>
         </div>
     </div>
     <br />

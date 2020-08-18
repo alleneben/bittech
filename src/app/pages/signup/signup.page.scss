@@ -107,6 +107,10 @@ ion-content {
         --padding-start: 0;
         --padding-bottom: 0;
         margin-bottom: 0.3rem;
+
+        ion-icon {
+            font-size: 1rem;
+        }
     }
 
     .card {
@@ -176,5 +180,8 @@ ion-content {
         // z-index: -99999;
     }
     // ios classes
-    
+    button:focus {
+        outline: none;
+        border: none;
+    }
 }
