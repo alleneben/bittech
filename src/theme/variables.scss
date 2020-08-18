@@ -236,3 +236,18 @@
     --ion-tab-bar-background: #1f1f1f;
   }
 }
+
+.success{
+  --background:#76BA1B;
+  --border-radius:2px;
+  --color:#fff;
+  margin-top: 15%;
+  --button-color:#ffffff;
+}
+.danger{
+  --background:#d33939;
+  --border-radius:2px;
+  --color:#fff;
+  margin-top: 15%;
+  --button-color:#ffffff;
+}

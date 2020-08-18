@@ -7,7 +7,7 @@ export interface AppConfig {
 }
 
 export const BaseAppConfig:AppConfig = {
-    apiBase: "http://bittechcorp.com/gfp/gfpapis/registration/register.php"
+    apiBase: "http://bittechcorp.com/gfp/gfpapis"
     // apiBase: "http://worktimer.kitchencarelimited.com/server/",
     // apiBase: "https://orders.kitchencarelimited.com/server/"
 };

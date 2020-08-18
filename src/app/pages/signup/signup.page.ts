@@ -18,14 +18,17 @@ export class SignupPage implements OnInit {
   slideMovementTotal:number = 0;
   mouseIsDown:boolean = false;
   slider:any;
-  signinform: FormGroup;
+  initform: FormGroup;
+  finalform: FormGroup;
+  init:boolean = true;
+  final: boolean =  false;
 
   passwordtype: string = 'password';
   passwordicon: string = 'eye-off-outline';
   togglepassword: boolean = false;
 
   constructor(private router: Router,private asv: UtilAppService,private usv: UtilService,private formBuilder:FormBuilder) {
-    this.signinform = this.formBuilder.group({
+    this.initform = this.formBuilder.group({
       username: new FormControl('',Validators.compose([Validators.required])),
       gender: new FormControl('',Validators.compose([Validators.required])),
       email: new FormControl('',Validators.compose([Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')])),
@@ -61,4 +64,22 @@ export class SignupPage implements OnInit {
     }
   }
 
+  save(){
+    if(!this.initform.valid) return this.usv.displayToast(`All fields marked * are required`,3000,true,'danger','top');
+    
+    this.usv.presentLoading()
+    this.asv.send(this.initform.value,'/registration/register.php')
+    .subscribe(rd => {
+      this.usv.dismissloading()
+      let out = rd;
+      if(out.response){
+        this.final = true;
+        this.init = false;
+      }
+    },err => {
+      this.usv.dismissloading()
+      this.usv.displayToast(err.name,2000,'','danger','top')
+    })
+  }
+  
 }

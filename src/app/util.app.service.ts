@@ -10,6 +10,15 @@ import { DataModel } from "./data.model";
 })
 export class UtilAppService {
 
+  private httpHeaders = new HttpHeaders()
+   .set('Access-Control-Allow-Origin', '*')
+   .set("Acces-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS")
+   .set("Acces-Control-Allow-Headers", "Origin, Content-Type, Cookies");
+  
+   private options = {
+    headers: this.httpHeaders
+  };
+
   constructor(@Inject(APP_CONFIG) private config:AppConfig,private http: HttpClient,) { }
 
   startbase(): Observable<DataModel> {
@@ -27,14 +36,16 @@ export class UtilAppService {
   }
 
 
-  send(data:any,bp:any): Observable<DataModel> {
+  send(data:any,url:any): Observable<DataModel> {
     let bd = this.formatpost(data);
-    return this.http.post<DataModel>(this.config.apiBase,bd,{})
+    return this.http.post<DataModel>(this.config.apiBase+url,bd,this.options)
   }
   
   formatpost(data:any){
     var fm = new FormData(),props={};
-    for (var key in data) {    
+    for (var key in data) {   
+      console.log(data[key]);
+       
       fm.append(key,data[key]);
       props[key]= key.substr(key.length-1);
     }

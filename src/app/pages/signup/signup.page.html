@@ -23,21 +23,21 @@
             </div>
             <div class="laptop"></div>
         </div>
-        <form [formGroup]="signinform" (ngSubmit)="submitForm()" novalidate>
+        <form [formGroup]="initform" novalidate *ngIf="init">
             <ion-item>
-                <ion-input placeholder="Username" formControlName="username" type="text" required></ion-input>
+                <ion-input placeholder="*Username" formControlName="username" type="text" required></ion-input>
                 <button>
                     <ion-icon slot="end" name="person-outline"></ion-icon>
                 </button>
             </ion-item>
             <ion-item>
-                <ion-input placeholder="Password" formControlName="pass" [type]="passwordtype" required></ion-input>
+                <ion-input placeholder="*Password" formControlName="pass" [type]="passwordtype" required></ion-input>
                 <button>
                     <ion-icon slot="icon-only" [name]="passwordicon" (click)="hideshowpassword()"></ion-icon>
                 </button>
             </ion-item>
             <ion-item>
-                <ion-input placeholder="Email" formControlName="email" type="email" required></ion-input>
+                <ion-input placeholder="*Email" formControlName="email" type="email" required></ion-input>
                 <button>
                     <ion-icon slot="end" name="at-outline"></ion-icon>
                 </button>
@@ -47,7 +47,7 @@
                 </ion-datetime>
             </ion-item> -->
             <ion-item>
-                <ion-label position="floating">Gender</ion-label>
+                <ion-label position="floating">*Gender</ion-label>
                 <ion-select formControlName="gender">
                     <ion-select-option value="1">Male</ion-select-option>
                     <ion-select-option value="2">Female</ion-select-option>
@@ -72,6 +72,61 @@
                     <ion-input placeholder="District"></ion-input>
                 </ion-item>
             </div> -->
+            <!-- <div class="two">
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+                <div class="spacer"></div>
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+            </div> -->
+            <!-- <div class="two">
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+                <div class="spacer"></div>
+                <ion-input placeholder="District"></ion-input>
+            </div> -->
+        </form>
+        <form [formGroup]="finalform" novalidate *ngIf="final">
+            <ion-item>
+                <ion-input placeholder="*First Name" formControlName="fname" type="text" required></ion-input>
+                <button>
+                    <ion-icon slot="end" name="person-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="*Last Name" formControlName="lname" type="text" required></ion-input>
+                <button>
+                    <ion-icon slot="end" name="person-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-datetime placeholder="Date of Birth" displayFormat="YYYY-MM-DD" min="1970-01-01" max="2020-12-31" formControlName="dob" required></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Phone number" formControlName="phone" type="number"></ion-input>
+                <button>
+                    <ion-icon slot="end" name="call-outline"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">*Country</ion-label>
+                <ion-select formControlName="country_list">
+                    <ion-select-option value="1">Ghana</ion-select-option>
+                    <ion-select-option value="2">Nigeria</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <div class="two">
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+                <div class="spacer"></div>
+                <ion-item>
+                    <ion-input placeholder="District"></ion-input>
+                </ion-item>
+            </div>
             <!-- <div class="two">
                 <ion-item>
                     <ion-input placeholder="District"></ion-input>
