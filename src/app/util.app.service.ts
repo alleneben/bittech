@@ -40,6 +40,9 @@ export class UtilAppService {
     let bd = this.formatpost(data);
     return this.http.post<DataModel>(this.config.apiBase+url,bd,this.options)
   }
+  simsend(data:any,url:any){
+    return {response: true, status: 'success'}
+  }
   
   formatpost(data:any){
     var fm = new FormData(),props={};

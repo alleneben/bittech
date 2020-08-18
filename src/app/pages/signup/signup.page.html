@@ -120,36 +120,54 @@
             </ion-item>
             <div class="two">
                 <ion-item>
-                    <ion-input placeholder="District"></ion-input>
+                    <ion-label position="floating">*District</ion-label>
+                    <ion-select formControlName="district_list">
+                        <ion-select-option value="1">Ghana</ion-select-option>
+                        <ion-select-option value="2">Nigeria</ion-select-option>
+                    </ion-select>
                 </ion-item>
                 <div class="spacer"></div>
                 <ion-item>
-                    <ion-input placeholder="District"></ion-input>
+                    <ion-label position="floating">*Constituency</ion-label>
+                    <ion-select formControlName="const_list">
+                        <ion-select-option value="1">Ghana</ion-select-option>
+                        <ion-select-option value="2">Nigeria</ion-select-option>
+                    </ion-select>
                 </ion-item>
             </div>
-            <!-- <div class="two">
+            <div class="two">
                 <ion-item>
-                    <ion-input placeholder="District"></ion-input>
+                    <ion-input placeholder="*Address(optional)" formControlName="address" required></ion-input>
                 </ion-item>
                 <div class="spacer"></div>
                 <ion-item>
-                    <ion-input placeholder="District"></ion-input>
+                    <ion-input placeholder="*Digital Address" formControlName="daddress" required></ion-input>
                 </ion-item>
-            </div> -->
-            <!-- <div class="two">
+            </div>
+            <div class="two">
                 <ion-item>
-                    <ion-input placeholder="District"></ion-input>
+                    <ion-label position="floating">*Are you a part of a political party?</ion-label>
+                    <ion-select formControlName="pp">
+                        <ion-select-option value="1">Yes</ion-select-option>
+                        <ion-select-option value="2">No</ion-select-option>
+                    </ion-select>
                 </ion-item>
                 <div class="spacer"></div>
-                <ion-input placeholder="District"></ion-input>
-            </div> -->
+                <ion-item>
+                    <ion-label position="floating">Choose Political Party</ion-label>
+                    <ion-select formControlName="npp">
+                        <ion-select-option value="1">npp</ion-select-option>
+                        <ion-select-option value="2">ndc</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </div>
         </form>
         <div class="btn">
             <ion-button mode="ios" (click)="save()">Next</ion-button>
         </div>
     </div>
     <br />
-    <!-- <div class="bg"> -->
-    <img src="../../../assets/icon/undraw_suburbs_8b83.png" alt="" srcset="">
-    <!-- </div> -->
+    <div class="bg">
+        <img src="../../../assets/icon/undraw_suburbs_8b83.png" alt="" srcset="">
+    </div>
 </ion-content>
